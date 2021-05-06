@@ -13,14 +13,14 @@ def get_html(url):
         print('Страница не существует!')
 
 
-def get_link(html):
+def get_date(html):
     soup = BeautifulSoup(html, 'lxml')
     try:
-        list2 = [p.text.strip() for p in soup.find_all('td')
+        data_date = [p.text.strip() for p in soup.find_all('td')
             if p.text is not None]
     except Exception.DoesNotExist:
-        list2 = ''
-    return list2
+        data_date = ''
+    return data_date
 
 
 def parse_table(table):
@@ -51,12 +51,12 @@ def parse_table(table):
     return(res)
 
 
-def parse_table2(table2):
+def parse_page_2(page_2):
     res = pd.DataFrame()
     date_reg = ''
     date_close = ''
-    date_reg = table2[6]
-    date_close_td = table2[7]
+    date_reg = page_2[6]
+    date_close_td = page_2[7]
     if date_close_td is not None:
         date_close = date_close_td
 
@@ -73,9 +73,13 @@ def main():
     num_inn = input("Введите ваш ИНН: ")
     # + '0278128540'
     print("\n---------\n")
-    url_inn = '/reestr?m.fulldescription=&m.shortdescription=&m.inn='
+    return num_inn
+
+
+if __name__ == '__main__':
     url = 'http://reestr.nostroy.ru'
-    url_inn = url+(url_inn)+quote(num_inn)
+    rel_inn = '/reestr?m.fulldescription=&m.shortdescription=&m.inn='
+    url_inn = url+(rel_inn)+quote(main())
     soup = BeautifulSoup(get_html(url_inn), 'lxml')
     tables = soup.find_all('table', {'class': 'items'})
     rel_cl = [tag.get('rel')for tag in soup.find_all('tr')
@@ -83,15 +87,11 @@ def main():
     num_clienta = rel_cl[0]
     url_client = url + num_clienta
     html = get_html(url_client)
-    table2 = get_link(html)
+    page_2 = get_date(html)
     result = pd.DataFrame()
     for item in tables:
         res = parse_table(item)
         result = result.append(res)
-    data_date = parse_table2(table2)
+    data_date = parse_page_2(page_2)
     result = result.append(data_date)
     result.to_excel('result.xlsx')
-
-
-if __name__ == '__main__':
-    main()
