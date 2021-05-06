@@ -15,7 +15,6 @@ def parse_table(table):
     reg_num = ''
     date_reg = ''
     date_close = ''
-    s = ''
 
     data_tr = table.find('tr', {'class': 'sro-link'})
     name_org = data_tr.find_all('td')[1].text.replace('<br />', '\n').strip()
@@ -32,10 +31,10 @@ def parse_table(table):
 
     res = res.append(pd.DataFrame([[
         id, name_org, inn, ogrn, status, type,
-        reg_num, date_reg, date_close, s]],
+        reg_num, date_reg, date_close]],
         columns=[
         'id', 'name_org', 'inn', 'ogrn', 'status',
-        'type', 'reg_num', 'date_reg', 'date_close', 's']), ignore_index=True)
+        'type', 'reg_num', 'date_reg', 'date_close']), ignore_index=True)
     print(res)
     return(res)
 
