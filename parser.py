@@ -120,9 +120,8 @@ if __name__ == '__main__':
     url_client = url + num_clienta
     html = get_html(url_client)
     page_2 = get_date(html)
-    f = url_client + '/certificates'
-    page_archive = get_html(f)
-    print(page_archive)
+    url_arch = url_client + '/certificates'
+    page_archive = get_html(url_arch)
     page_3 = find_archive(page_archive)
     result = pd.DataFrame()
     for item in tables:
