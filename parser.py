@@ -57,7 +57,6 @@ def parse_table(table):
         columns=[
         'id', 'name_org', 'inn', 'ogrn', 'status',
         'type', 'reg_num']), ignore_index=True)
-    print(res)
     return(res)
 
 
