@@ -23,6 +23,16 @@ def get_date(html):
     return data_date
 
 
+def find_archive(page_archive):
+    soup = BeautifulSoup(page_archive, 'lxml')
+    try:
+        data_arc = [p.text.strip() for p in soup.find_all('td')
+            if p.text is not None]
+    except Exception.DoesNotExist:
+        data_arc = ''
+    return data_arc
+
+
 def parse_table(table):
     res = pd.DataFrame()
     id = 0
@@ -60,18 +70,40 @@ def parse_page_2(page_2):
     if date_close_td is not None:
         date_close = date_close_td
 
-    res2 = res.append(pd.DataFrame([[
+    res = res.append(pd.DataFrame([[
          date_reg, date_close]],
         columns=[
          'date_reg', 'date_close']), ignore_index=True)
-    print(res2)
-    return(res2)
+    print(res)
+    return(res)
+
+
+def parse_page_3(page_3):
+    res = pd.DataFrame()
+    num_sv = ''
+    date_open = ''
+    basis = ''
+    status_sv = ''
+
+    num_sv = page_3[7]
+    date_open_td = page_3[8]
+    basis = page_3[9]
+    status_sv = page_3[11]
+    if date_open_td is not None:
+        date_open = date_open_td
+
+    res = res.append(pd.DataFrame([[
+        num_sv, date_open, basis, status_sv]],
+        columns=[
+         'num_sv', 'date_open', 'basis', 'status_sv']), ignore_index=True)
+    print(res)
+    return(res)
 
 
 def main():
     print("\n---------\n")
     num_inn = input("Введите ваш ИНН: ")
-    # + '0278128540'
+    # + '0278128540' 770965012811
     print("\n---------\n")
     return num_inn
 
@@ -88,10 +120,16 @@ if __name__ == '__main__':
     url_client = url + num_clienta
     html = get_html(url_client)
     page_2 = get_date(html)
+    f = url_client + '/certificates'
+    page_archive = get_html(f)
+    print(page_archive)
+    page_3 = find_archive(page_archive)
     result = pd.DataFrame()
     for item in tables:
         res = parse_table(item)
         result = result.append(res)
     data_date = parse_page_2(page_2)
     result = result.append(data_date)
+    archive = parse_page_3(page_3)
+    result = result.append(archive)
     result.to_excel('result.xlsx')
