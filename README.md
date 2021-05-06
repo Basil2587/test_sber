@@ -1,5 +1,5 @@
 # Это приложение парсинга сайта: 
-      'http://reestr.nostroy.ru '
+      http://reestr.nostroy.ru
 
 #### Для работы кода нужны библеотеки: requests, BeautifulSoup, pandas.
 
