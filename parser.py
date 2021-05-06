@@ -74,7 +74,6 @@ def parse_page_2(page_2):
          date_reg, date_close]],
         columns=[
          'date_reg', 'date_close']), ignore_index=True)
-    print(res)
     return(res)
 
 
