@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="icon" type="image/x-icon" href="/nostroy_favicon.ico?v3" />
+    <meta charset="utf-8">
+    <title>Единый реестр членов СРО</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+        <link rel="stylesheet" href="/css/25cfe01.css"/>
+                <link rel="stylesheet" href="/css/01b1d84.css" />
+    
+</head>
+<body>
+    <div id="layout-wrapper" class="container-fluid ">
+                    <header id="header-block">
+                <div class="row">
+                    <div class="col-md-9 reestr-head-left-wrapper">
+                        <h1><a  href="/"><img src="/bundles/tbwebsite/images/logo_head.png"></a> <span>Единый реестр членов СРО</span></h1>
+                    </div>
+                    <div class="col-md-3 reestr-head-right-wrapper">
+                        <!--<a class="btn btn-custom" href="">Заказать выписку</a>-->
+                        <button type="button" id="contact-pop-up-toggle-button" data-target="#contact-pop-up-toggle-data" class="btn btn-custom" >Контакты</button>
+                        <div id="contact-pop-up-toggle-data" class="hidden">
+                            <div id="contact-pop-up-toggle-content-wrapper">
+                                <div id="contact-pop-up-close-button"></div>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="title">Техническая поддержка</div>
+                                        <div class="data"> +7 (812) 389-22-56</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">НОСТРОЙ</div>
+                                        <div class="data">+7 (495) 987-31-50</div>
+                                    </li>
+                                    <li>
+                                        <div class="title">E-mail:</div>
+                                        <div><a href="mailto:reestr@nostroy.ru">reestr@nostroy.ru</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        
+        <nav id="navigation-block">
+                <ul class="nav nav-pills">
+        <li><a href="/">Реестр СРО</a></li>
+        <li class="active"><a href="/reestr">Реестр членов СРО</a></li>
+    </ul>
+        </nav>
+        <main id="content-block" class="content">
+                <form id="members-form">
+        <div id="members" class="condensed small no-more-tables ">
+            <table class="items table table-selectable-row table-striped">
+                <thead>
+                <tr>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=m.fulldescription&amp;direction=asc&amp;page=1" title="Полное наименование члена СРО">Полное наименование члена СРО</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=m.shortdescription&amp;direction=asc&amp;page=1" title="Сокращенное наименование члена СРО">Сокращенное наименование члена СРО</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=m.inn&amp;direction=asc&amp;page=1" title="ИНН">ИНН</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=m.ogrnip&amp;direction=asc&amp;page=1" title="ОГРН">ОГРН</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=bms.id%2Cm.id&amp;direction=asc&amp;page=1" title="Cтатус">Cтатус</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=bmt.id%2Cm.id&amp;direction=asc&amp;page=1" title="Тип">Тип</a>
+</th>
+                    <th><a class="sortable" href="/reestr?m_fulldescription=&amp;m_shortdescription=&amp;m_inn=0278128540&amp;sort=u.registrationnumber_normalized%2Cm.id&amp;direction=asc&amp;page=1" title="Рег. номер СРО">Рег. номер СРО</a>
+</th>
+                </tr>
+                <tr>
+                    <td>        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <input type="text" class="form-control" value="" name="m.fulldescription" placeholder="По наименованию члена СРО">
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <input type="text" class="form-control" value="" name="m.shortdescription" placeholder="По наименованию члена СРО">
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <input type="text" class="form-control" value="0278128540" name="m.inn" placeholder="По ИНН">
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <input type="text" class="form-control" value="" name="m.ogrnip" placeholder="По ОГРН">
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                        <select name="bms.id" class="form-control">
+        <option value="" >&nbsp;</option>
+                    <option value="1">Является членом</option>
+            1 - 
+                    <option value="2">Исключен</option>
+            2 - 
+            </select>
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                        <select name="bmt.id" class="form-control">
+        <option value="" >&nbsp;</option>
+                    <option value="1">ЮЛ</option>
+            1 - 
+                    <option value="2">ИП</option>
+            2 - 
+            </select>
+
+            </div>
+</td>
+                    <td>        <div class="input-group input-group-sm">
+                            <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <input type="text" class="form-control" value="" name="u.registrationnumber" placeholder="По номеру СРО">
+
+            </div>
+</td>
+                </tr>
+                </thead>
+                <tbody>
+                                    <tr rel="/reestr/clients/152/members/389634" class="sro-link">
+                        <td>Общество с ограниченной ответственностью &quot;Центр&quot;</td>
+                        <td>ООО &quot;Центр&quot;</td>
+                        <td>0278128540</td>
+                        <td>1060278109055</td>
+                        <td>
+                                                            <span class="read-text">
+                                    <span class="glyphicon glyphicon-warning-sign" title="Исключены сведения о СРО из государственного реестра СРО (Приказ Ростехнадзора от 06.06.2017 № СП-26)"></span>
+                                    &nbsp;&nbsp;&nbsp;
+                                </span>
+                                                        Является членом
+                        </td>
+                                                    <td>ЮЛ</td>
+                                                <td>СРО-С-085-27112009</td>
+                    </tr>
+                                    <tr rel="/reestr/clients/92/members/3490451" class="sro-link">
+                        <td>Общество с ограниченной ответственностью «Центр»</td>
+                        <td>ООО «Центр»</td>
+                        <td>0278128540</td>
+                        <td>1060278109055</td>
+                        <td>
+                                                            <span class = "glyphicon icon icon-positive"></span>
+                                                        Является членом
+                        </td>
+                                                    <td>ЮЛ</td>
+                                                <td>СРО-С-025-10082009</td>
+                    </tr>
+                                </tbody>
+            </table>
+        </div>
+        <input type="submit" style="display: none;">
+        
+        
+    <div class="tatal-count-wrapper">
+                                                
+            
+            <p>Отображено 1 - 2 из 2</p>
+            </div>
+    </form>
+        </main>
+                    <footer id="footer-block">
+                                    <ul id="footer-block-logo-list">
+                        <li>
+                            <a href="http://www.nostroy.ru">
+                                <img src="/bundles/tbwebsite/images/logo_head.png"><br>
+                                НАЦИОНАЛЬНОЕ ОБЪЕДИНЕНИЕ СТРОИТЕЛЕЙ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.gosnadzor.ru">
+                                <img src="/bundles/tbwebsite/images/footer-tehnadzor-logo.png"><br>
+                                РОСТЕХНАДЗОР
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"href="http://government.ru">
+                                <img src="/bundles/tbwebsite/images/footer-russian-federation-logo.png"><br>
+                                ПРАВИТЕЛЬСТВО РОССИЙСКОЙ ФЕДЕРАЦИИ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.duma.gov.ru">
+                                <img src="/bundles/tbwebsite/images/footer-gosduma-logo.png"><br>
+                                ГОСУДАРСТВЕННАЯ ДУМА РОССИЙСКОЙ ФЕДЕРАЦИИ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.minstroyrf.ru">
+                                <img src="/bundles/tbwebsite/images/footer-minstroy-logo.png"><br>
+                                МИНИСТЕРСТВО СТРОИТЕЛЬСТВА И ЖКХ РОССИЙСКОЙ ФЕДЕРАЦИИ
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.nopriz.ru">
+                                <img src="/bundles/tbwebsite/images/footer-nopriz-logo.png"><br>
+                                НАЦИОНАЛЬНОЕ ОБЪЕДИНЕНИЕ ИЗЫСКАТЕЛЕЙ И ПРОЕКТИРОВЩИКОВ
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <p>
+                                © 2021 Ассоциация «Общероссийская негосударственная некоммерческая организация – общероссийское отраслевое объединение работодателей «Национальное объединение саморегулируемых организаций, основанных на членстве лиц, осуществляющих строительство».
+                            </p>
+                        </div>
+                    </div>
+                            </footer>
+            </div>
+
+            <script src="/js/21c91d0.js"></script>
+    
+            <script>
+        $(function(){
+            $('.datepicker').datepicker({
+                format: 'dd.mm.yyyy',
+                forceParse: true,
+                isRTL: false,
+                autoclose: true,
+                language: 'ru',
+                clearBtn: true
+            }).on('changeDate', function () {
+                $('#filter_form').submit();
+            });
+        });
+    </script>
+
+        <script>
+        $(function(){
+            $('#filter_clear').click(function () {
+                form = $('#filter_form');
+                $('input[type=text]', form).val('');
+                $('select', form).val('');
+                form.submit();
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $('.sro-link').on('click', function(){
+                window.location.href = $(this).attr('rel');
+            });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $('form select').change(function(){
+                $(this).parents('form').submit();
+            });
+
+            $('input').keydown(function(e){
+                if (e.keyCode == 13) {
+                    $(this).parents('form').submit();
+                    return false;
+                }
+            });
+
+            $('#contact-pop-up-toggle-button').click(function(){
+                var targetElement = $($(this).attr('data-target'));
+                $(targetElement).removeClass('hidden').offset({
+                    top: $(this).offset().top - 5,
+                    left: ($(this).offset().left - $(targetElement).outerWidth() + $(this).outerWidth() + 5 )
+                });
+            })
+            $('#contact-pop-up-close-button').click(function(){
+                var targetElement = $($('#contact-pop-up-toggle-button').attr('data-target'));
+                $(targetElement).addClass('hidden');
+            })
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter32515190 = new Ya.Metrika({
+                    id: 32515190,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {
+            }
+        });
+        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+            n.parentNode.insertBefore(s, n);
+        };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/32515190" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript><!-- /Yandex.Metrika counter --></body>
+</html>
