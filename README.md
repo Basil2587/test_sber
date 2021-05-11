@@ -17,5 +17,5 @@
             подставляем в функции парсинга по отбору нужной информации с различных страниц (
             def parse_table(table), parse_page_2(page_2), parse_page_arch(page_arch),
             parse_page_right(page_right)). 
-    Мы получили таблицы данных, объединяем их df = pd.concat([res, data_date, archive, the_right]). 
+    Мы получили таблицы данных, объединяем их df = pd.concat([res, data_date, archive, the_right], axis=1). 
     Добавляем всё в DataFrame и выгружаем в базу данных с именем pars_data.db.
