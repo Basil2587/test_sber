@@ -45,6 +45,7 @@ def find_right(page_right):
 
 
 def parse_table(table):
+    # парсинг со страницы "реестр членов СРО" из 2 по 6 столбца информации
     res = pd.DataFrame()
     name_org = ''
     inn = ''
@@ -71,6 +72,7 @@ def parse_table(table):
 
 
 def parse_page_2(page_2):
+    # парсинг со страницы "Сведения о члене СРО" из 7 по 8 столбца информации
     res = pd.DataFrame()
     date_reg = ''
     date_close = ''
@@ -86,6 +88,7 @@ def parse_page_2(page_2):
 
 
 def parse_page_arch(page_arch):
+    # парсинг со страницы "Архив"
     res = pd.DataFrame()
     num_sv = ''
     date_open = ''
@@ -107,6 +110,7 @@ def parse_page_arch(page_arch):
 
 
 def parse_page_right(page_right):
+    # парсинг со страницы "Сведения о наличии права"
     res = pd.DataFrame()
     inform_of_the_right = ''
     inform_right = page_right[0]
